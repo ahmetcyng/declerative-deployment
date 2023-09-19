@@ -17,3 +17,5 @@ spec:
         image: 192.168.2.54:5000/hello-world-flask
         ports:
         - containerPort: 6666
+      imagePullSecrets:
+        - name: privateregistrysecret
