@@ -14,7 +14,6 @@ spec:
     spec:
       containers:
       - name: helloworldflask
-        imagePullPolicy: Never
         image: 192.168.2.54:5000/hello-world-flask
         ports:
         - containerPort: 6666
