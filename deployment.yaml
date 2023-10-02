@@ -3,6 +3,10 @@ kind: Deployment
 metadata:
   name: flaskappdeployment
 spec:
+ tls:
+  - hosts:
+    - 192.168.2.54
+    secretName: mysecret
   replicas: 1
   selector:
     matchLabels:
@@ -12,10 +16,6 @@ spec:
       labels:
         app: helloworldflask
     spec:
-      tls:
-      - hosts:
-        - 192.168.2.54
-        secretName: mysecret
       containers:
       - name: helloworldflask
         image: 192.168.2.54:5000/hello-world-flask:latest
