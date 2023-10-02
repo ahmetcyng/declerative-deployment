@@ -18,4 +18,4 @@ spec:
         ports:
         - containerPort: 6666
       imagePullSecrets:
-        - name: privateregistrysecret
+        - name: privateregistrycredential
