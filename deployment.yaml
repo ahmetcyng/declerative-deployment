@@ -3,10 +3,6 @@ kind: Deployment
 metadata:
   name: flaskappdeployment
 spec:
- tls:
-  - hosts:
-    - 192.168.2.54
-    secretName: mysecret
   replicas: 1
   selector:
     matchLabels:
