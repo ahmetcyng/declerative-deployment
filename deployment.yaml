@@ -12,9 +12,13 @@ spec:
       labels:
         app: helloworldflask
     spec:
+      tls:
+      - hosts:
+        - 192.168.2.54
+        secretName: mysecret
       containers:
       - name: helloworldflask
-        image: 192.168.2.54:5000/hello-world-flask
+        image: 192.168.2.54:5000/hello-world-flask:latest
         ports:
         - containerPort: 6666
       imagePullSecrets:
