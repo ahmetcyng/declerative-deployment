@@ -31,4 +31,5 @@ spec:
   ports:
   - port: 6000
     targetPort: 5134
+    nodePort: 10200
   type: LoadBalancer
