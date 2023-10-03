@@ -16,7 +16,7 @@ spec:
       - name: helloworldflask
         image: 192.168.2.54:5000/hello-world-flask:latest
         ports:
-        - containerPort: 80
+        - containerPort: 5134
       imagePullSecrets:
         - name: privateregistrycredential
 
@@ -29,6 +29,6 @@ spec:
   selector:
     app: flaskappdeployment
   ports:
-  - port: 80
-    targetPort: 80
+  - port: 5134
+    targetPort: 5134
   type: LoadBalancer
