@@ -32,4 +32,5 @@ spec:
   - port: 6000
     targetPort: 5134
     nodePort: 10200
+    protocol: TCP
   type: LoadBalancer
