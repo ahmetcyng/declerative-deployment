@@ -16,8 +16,7 @@ spec:
       - name: helloworldflask
         image: 192.168.2.54:5000/hello-world-flask:latest
         ports:
-          - name: web
-            containerPort: 5134
+          containerPort: 5134
       imagePullSecrets:
         - name: privateregistrycredential
 
@@ -30,8 +29,7 @@ spec:
   selector:
     app: flaskappdeployment
   ports:
-    - name: web
       protocol: TCP
-      port: 80 # The port exposed by the service
-      targetPort: 5134 # The port or port name of the Pod
-  type: ClusterIP
+      port: 6000
+      targetPort: 5134
+  type: LoadBalancer
