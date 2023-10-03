@@ -29,6 +29,6 @@ spec:
   selector:
     app: flaskappdeployment
   ports:
-  - port: 5134
-    targetPort: 5134
+  - port: 80
+    targetPort: 80
   type: LoadBalancer
