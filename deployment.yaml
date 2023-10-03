@@ -29,6 +29,8 @@ spec:
   selector:
     app: flaskappdeployment
   ports:
-  - port: 80
-    targetPort: 80
-  type: LoadBalancer
+    - name: web
+      protocol: TCP
+      port: 80 # The port exposed by the service
+      targetPort: 5134 # The port or port name of the Pod
+  type: ClusterIP
