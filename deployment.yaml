@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flaskappdeployment
+  name: helloworldflask
 spec:
   replicas: 1
   selector:
@@ -16,7 +16,7 @@ spec:
       - name: helloworldflask
         image: 192.168.2.54:5000/hello-world-flask:latest
         ports:
-          containerPort: 5134
+        - containerPort: 5134
       imagePullSecrets:
         - name: privateregistrycredential
 
@@ -24,13 +24,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: flaskappservice
+  name: helloworldflask
 spec:
+  type: LoadBalancer
   selector:
     app: helloworldflask
   ports:
-  - port: 6000
+  - protocol: TCP
+    port: 5134
     targetPort: 5134
-    nodePort: 10200
-    protocol: TCP
-  type: LoadBalancer
