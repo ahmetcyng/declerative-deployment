@@ -27,7 +27,7 @@ metadata:
   name: flaskappservice
 spec:
   selector:
-    app: flaskappdeployment
+    app: helloworldflask
   ports:
   - port: 6000
     targetPort: 5134
