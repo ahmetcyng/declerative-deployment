@@ -16,7 +16,7 @@ spec:
       - name: helloworldflask
         image: 192.168.2.54:5000/hello-world-flask:latest
         ports:
-        - containerPort: 5134
+        - containerPort: 5000
       imagePullSecrets:
         - name: privateregistrycredential
 
@@ -31,5 +31,6 @@ spec:
     app: helloworldflask
   ports:
   - protocol: TCP
-    port: 5134
-    targetPort: 5134
+    port: 5000
+    targetPort: 5000
+
