@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: helloworldflask
-        image: 192.168.2.158:5000/hello-world-flask:latest
+        image: 192.168.2.176:5000/hello-world-flask:latest
         ports:
         - containerPort: 5000
       imagePullSecrets:
